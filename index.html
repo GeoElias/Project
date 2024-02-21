@@ -34,7 +34,8 @@
         }
         input[type="text"],
         input[type="password"],
-        input[type="submit"] {
+        input[type="submit"],
+        select {
             width: 100%;
             padding: 10px;
             box-sizing: border-box;
@@ -78,9 +79,27 @@
                     <label for="search">Search:</label>
                     <input type="text" id="search" name="search" placeholder="Enter keywords..." required>
                 </div>
+                <div class="form-group">
+                    <label for="category">Select Category:</label>
+                    <select id="category" name="category">
+                        <option value="Car Payment">Car Payment</option>
+                        <option value="Finance or Leasing">Finance or Leasing</option>
+                        <option value="Downpayment">Downpayment</option>
+                        <option value="Payoff Schedule">Payoff Schedule</option>
+                        <option value="House Payment">House Payment</option>
+                        <option value="Mortgage Rate">Mortgage Rate</option>
+                        <option value="Down Payments">Down Payments</option>
+                        <option value="Budget Set Up">Budget Set Up</option>
+                        <option value="Interest Rates">Interest Rates</option>
+                        <option value="Taxes">Taxes</option>
+                        <option value="Savings Account Breakdown">Savings Account Breakdown</option>
+                        <option value="Student Loan Payoff Schedule">Student Loan Payoff Schedule</option>
+                    </select>
+                </div>
                 <input type="submit" value="Search">
             </form>
         </div>
     </div>
 </body>
 </html>
+
