@@ -27,4 +27,53 @@
         }
     </script>
 </body>
+    <body>
+    <h1>Mortgage Affordability Calculator</h1>
+    <form>
+        Annual Income: <input type="number" id="annualIncome" required><br>
+        Monthly Debt Payments: <input type="number" id="monthlyDebtPayments" required><br>
+        Interest Rate (%): <input type="number" id="interestRate" step="0.01" required><br>
+        Loan Term (years): <input type="number" id="loanTerm" required><br>
+        <button type="button" onclick="calculateAffordability()">Calculate</button><br>
+        Maximum Affordable Mortgage: <span id="maxMortgage"></span>
+    </form>
+
+    <script>
+        function calculateAffordability() {
+            var annualIncome = document.getElementById('annualIncome').value;
+            var monthlyDebtPayments = document.getElementById('monthlyDebtPayments').value;
+            var interestRate = document.getElementById('interestRate').value / 100 / 12;
+            var loanTerm = document.getElementById('loanTerm').value * 12;
+
+            var monthlyIncome = annualIncome / 12;
+            var frontRatio = 0.28;
+            var backRatio = 0.36;
+
+            var maxPayment = monthlyIncome * frontRatio - monthlyDebtPayments;
+            var maxMortgage = maxPayment / ((interestRate * Math.pow(1 + interestRate, loanTerm)) / (Math.pow(1 + interestRate, loanTerm) - 1));
+
+            document.getElementById('maxMortgage').innerText = '$' + maxMortgage.toFixed(2);
+        }
+    </script>
+</body>
+    <body>
+    <h1>Sales Tax Calculator</h1>
+    <form>
+        Total Amount: <input type="number" id="totalAmount" required><br>
+        Sales Tax Rate (%): <input type="number" id="taxRate" step="0.01" required><br>
+        <button type="button" onclick="calculateTax()">Calculate</button><br>
+        Total Amount with Tax: <span id="totalWithTax"></span>
+    </form>
+
+    <script>
+        function calculateTax() {
+            var totalAmount = document.getElementById('totalAmount').value;
+            var taxRate = document.getElementById('taxRate').value / 100;
+
+            var totalWithTax = totalAmount * (1 + taxRate);
+
+            document.getElementById('totalWithTax').innerText = '$' + totalWithTax.toFixed(2);
+        }
+    </script>
+</body>
 </html>
