@@ -9,6 +9,11 @@ function calculateLoan() {
     document.getElementById('monthlyPayment').innerText = '$' + monthlyPayment.toFixed(2);
 }
 
+function resetLoan() {
+    document.getElementById('loanForm').reset();
+    document.getElementById('monthlyPayment').innerText = '';
+}
+
 // Mortgage Affordability Calculator
 function calculateMortgageAffordability() {
     var annualIncome = parseFloat(document.getElementById('annualIncome').value);
@@ -26,6 +31,11 @@ function calculateMortgageAffordability() {
     document.getElementById('maxMortgage').innerText = '$' + maxMortgage.toFixed(2);
 }
 
+function resetMortgage() {
+    document.getElementById('mortgageForm').reset();
+    document.getElementById('maxMortgage').innerText = '';
+}
+
 // Sales Tax Calculator
 function calculateTax() {
     var totalAmount = parseFloat(document.getElementById('totalAmount').value);
@@ -34,6 +44,11 @@ function calculateTax() {
     var totalWithTax = totalAmount * (1 + taxRate);
 
     document.getElementById('totalWithTax').innerText = '$' + totalWithTax.toFixed(2);
+}
+
+function resetTax() {
+    document.getElementById('taxForm').reset();
+    document.getElementById('totalWithTax').innerText = '';
 }
 
 // Car Payment Calculator
@@ -47,6 +62,11 @@ function calculateCarPayment() {
     var monthlyPayment = (loanAmount * interestRate) / (1 - Math.pow(1 + interestRate, -loanTerm));
 
     document.getElementById('monthlyCarPayment').innerText = '$' + monthlyPayment.toFixed(2);
+}
+
+function resetCar() {
+    document.getElementById('carForm').reset();
+    document.getElementById('monthlyCarPayment').innerText = '';
 }
 
 // Leasing Calculator
@@ -63,6 +83,11 @@ function calculateLeasing() {
     document.getElementById('monthlyLeasePayment').innerText = '$' + monthlyLeasePayment.toFixed(2);
 }
 
+function resetLeasing() {
+    document.getElementById('leasingForm').reset();
+    document.getElementById('monthlyLeasePayment').innerText = '';
+}
+
 // Mortgage Rate Calculator
 function calculateMortgageRate() {
     var loanAmount = parseFloat(document.getElementById('mortgageLoanAmount').value);
@@ -73,6 +98,11 @@ function calculateMortgageRate() {
     var annualInterestRate = interestRate * 12 * 100;
 
     document.getElementById('mortgageRate').innerText = annualInterestRate.toFixed(2) + '%';
+}
+
+function resetMortgageRate() {
+    document.getElementById('mortgageRateForm').reset();
+    document.getElementById('mortgageRate').innerText = '';
 }
 
 // Budget Setup Maker
@@ -95,6 +125,11 @@ function calculateBudgetSetup() {
     document.getElementById('budgetSetupSummary').innerHTML = budgetSetupSummary;
 }
 
+function resetBudgetSetup() {
+    document.getElementById('budgetSetupForm').reset();
+    document.getElementById('budgetSetupSummary').innerText = '';
+}
+
 // Student Loan Payoff Schedule
 function calculateStudentLoanPayoff() {
     var loanAmount = parseFloat(document.getElementById('studentLoanAmount').value);
@@ -110,3 +145,7 @@ function calculateStudentLoanPayoff() {
     document.getElementById('studentLoanTotalInterest').innerText = '$' + totalInterest.toFixed(2);
     document.getElementById('studentLoanPayoffDate').innerText = payoffDate.toDateString();
 }
+
+function resetStudentLoan() {
+    document.getElementById('studentLoanForm').reset();
+    document.getElementById('studentLoanMonthly
