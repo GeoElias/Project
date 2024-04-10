@@ -93,5 +93,61 @@ input[type="submit"] {
     background-color: #f9f9f9;
     border-radius: 5px;
 
+/* Directory styles */
+.directory {
+    margin-top: 30px;
+}
+
+.directory ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.directory ul li {
+    margin-bottom: 10px;
+}
+
+.directory ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Footer styles */
+footer {
+    margin-top: 50px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-links ul li:last-child {
+    margin-right: 0;
+}
+
+.social-media a {
+    margin-right: 10px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
 
 
