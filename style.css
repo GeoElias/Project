@@ -19,6 +19,26 @@ h1, h2 {
     color: #333;
 }
 
+/* Directory styles */
+.directory {
+    margin-top: 30px;
+}
+
+.directory ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.directory ul li {
+    margin-bottom: 10px;
+}
+
+.directory ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+
 /* Login Box */
 .login-container {
     margin-top: 30px;
@@ -93,24 +113,6 @@ input[type="submit"] {
     background-color: #f9f9f9;
     border-radius: 5px;
 
-/* Directory styles */
-.directory {
-    margin-top: 30px;
-}
-
-.directory ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.directory ul li {
-    margin-bottom: 10px;
-}
-
-.directory ul li a {
-    text-decoration: none;
-    color: #333;
-}
 
 /* Footer styles */
 footer {
