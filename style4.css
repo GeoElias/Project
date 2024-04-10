@@ -10,7 +10,9 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
 }
 
@@ -20,14 +22,12 @@ h1 {
 }
 
 .tax-info-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
 }
 
 .tax-info-box {
-    width: calc(50% - 20px);
-    margin-bottom: 20px;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
